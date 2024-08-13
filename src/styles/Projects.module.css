@@ -1,0 +1,217 @@
+.projectsSection {
+  text-align: center; /* Centers the section title */
+}
+
+.sectionTitle {
+  margin-bottom: 20px;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.container {
+  position: relative;
+  width: 190px;
+  height: 254px;
+  transition: 200ms;
+  margin: 0 auto; /* Center the card within the slide */
+}
+
+.container:active {
+  width: 180px;
+  height: 245px;
+}
+
+.card {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: 700ms;
+  background: linear-gradient(
+    43deg,
+    rgb(65, 88, 208) 0%,
+    rgb(200, 80, 192) 46%,
+    rgb(255, 204, 112) 100%
+  );
+}
+
+.subtitle {
+  transform: translateY(160px);
+  color: rgb(134, 110, 221);
+  text-align: center;
+  width: 100%;
+}
+
+.title {
+  opacity: 0;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out-out;
+  transition-delay: 100ms;
+  position: absolute;
+  font-size: x-large;
+  font-weight: bold;
+  color: white;
+}
+
+.tracker:hover ~ .card .title {
+  opacity: 1;
+}
+
+.prompt {
+  bottom: 8px;
+  left: 12px;
+  z-index: 20;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 300ms ease-in-out-out;
+  position: absolute;
+  max-width: 110px;
+  color: rgb(255, 255, 255);
+}
+
+.tracker {
+  position: absolute;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+}
+
+.tracker:hover {
+  cursor: pointer;
+}
+
+.tracker:hover ~ .card .prompt {
+  opacity: 0;
+}
+
+.tracker:hover ~ .card {
+  transition: 300ms;
+  filter: brightness(1.1);
+}
+
+.container:hover .card::before {
+  transition: 200ms;
+  content: "";
+  opacity: 80%;
+}
+
+.canvas {
+  perspective: 800px;
+  inset: 0;
+  z-index: 200;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.card::before {
+  content: "";
+  background: linear-gradient(
+    43deg,
+    rgb(65, 88, 208) 0%,
+    rgb(200, 80, 192) 46%,
+    rgb(255, 204, 112) 100%
+  );
+  filter: blur(2rem);
+  opacity: 30%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  transition: 200ms;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Tracker hover effects */
+.tr1:hover ~ .card {
+  transform: rotateX(20deg) rotateY(-10deg) rotateZ(0deg);
+}
+.tr2:hover ~ .card {
+  transform: rotateX(20deg) rotateY(-5deg) rotateZ(0deg);
+}
+.tr3:hover ~ .card {
+  transform: rotateX(20deg) rotateY(0deg) rotateZ(0deg);
+}
+.tr4:hover ~ .card {
+  transform: rotateX(20deg) rotateY(5deg) rotateZ(0deg);
+}
+.tr5:hover ~ .card {
+  transform: rotateX(20deg) rotateY(10deg) rotateZ(0deg);
+}
+.tr6:hover ~ .card {
+  transform: rotateX(10deg) rotateY(-10deg) rotateZ(0deg);
+}
+.tr7:hover ~ .card {
+  transform: rotateX(10deg) rotateY(-5deg) rotateZ(0deg);
+}
+.tr8:hover ~ .card {
+  transform: rotateX(10deg) rotateY(0deg) rotateZ(0deg);
+}
+.tr9:hover ~ .card {
+  transform: rotateX(10deg) rotateY(5deg) rotateZ(0deg);
+}
+.tr10:hover ~ .card {
+  transform: rotateX(10deg) rotateY(10deg) rotateZ(0deg);
+}
+.tr11:hover ~ .card {
+  transform: rotateX(0deg) rotateY(-10deg) rotateZ(0deg);
+}
+.tr12:hover ~ .card {
+  transform: rotateX(0deg) rotateY(-5deg) rotateZ(0deg);
+}
+.tr13:hover ~ .card {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+.tr14:hover ~ .card {
+  transform: rotateX(0deg) rotateY(5deg) rotateZ(0deg);
+}
+.tr15:hover ~ .card {
+  transform: rotateX(0deg) rotateY(10deg) rotateZ(0deg);
+}
+.tr16:hover ~ .card {
+  transform: rotateX(-10deg) rotateY(-10deg) rotateZ(0deg);
+}
+.tr17:hover ~ .card {
+  transform: rotateX(-10deg) rotateY(-5deg) rotateZ(0deg);
+}
+.tr18:hover ~ .card {
+  transform: rotateX(-10deg) rotateY(0deg) rotateZ(0deg);
+}
+.tr19:hover ~ .card {
+  transform: rotateX(-10deg) rotateY(5deg) rotateZ(0deg);
+}
+.tr20:hover ~ .card {
+  transform: rotateX(-10deg) rotateY(10deg) rotateZ(0deg);
+}
+.tr21:hover ~ .card {
+  transform: rotateX(-20deg) rotateY(-10deg) rotateZ(0deg);
+}
+.tr22:hover ~ .card {
+  transform: rotateX(-20deg) rotateY(-5deg) rotateZ(0deg);
+}
+.tr23:hover ~ .card {
+  transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
+}
+.tr24:hover ~ .card {
+  transform: rotateX(-20deg) rotateY(5deg) rotateZ(0deg);
+}
+.tr25:hover ~ .card {
+  transform: rotateX(-20deg) rotateY(10deg) rotateZ(0deg);
+}
