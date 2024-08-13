@@ -1,6 +1,7 @@
+// src/layouts/default.tsx
 import { Link } from "@nextui-org/link";
-
 import { Navbar } from "@/components/navbar";
+import CustomCursor from "@/components/CustomCursor";
 
 export default function DefaultLayout({
   children,
@@ -9,6 +10,7 @@ export default function DefaultLayout({
 }) {
   return (
     <div className="relative flex flex-col h-screen">
+      <CustomCursor />
       <Navbar />
       <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
         {children}
