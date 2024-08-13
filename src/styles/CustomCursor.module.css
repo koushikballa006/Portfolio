@@ -1,19 +1,19 @@
 /* src/styles/CustomCursor.module.css */
 .cursor {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: whitesmoke; /* Change to the color you prefer */
-  position: fixed;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-  transition:
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: whitesmoke; /* Change to the color you prefer */
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    transition:
     transform 0.1s ease-out,
     background-color 0.2s ease-out;
-}
-
-.cursor:hover {
-  transform: scale(1.5);
-  background-color: darkviolet;
-}
+  }
+  
+  .cursor:hover {
+    transform: scale(1.5);
+    background-color: darkviolet;
+  }
