@@ -19,7 +19,6 @@ const IndexPage: React.FC = () => {
   const isProjectsInView = useInView(projectsRef, { once: true, amount: 0.1 });
 
   useEffect(() => {
-    // Force a resize event after the component mounts
     window.dispatchEvent(new Event("resize"));
   }, []);
 
@@ -27,8 +26,8 @@ const IndexPage: React.FC = () => {
     <LocomotiveScrollProvider
       options={{
         smooth: true,
-        lerp: 0.075, // Lower values make scrolling smoother
-        multiplier: 0.9, // Adjust scrolling speed (lower is slower)
+        lerp: 0.075,
+        multiplier: 0.9,
         class: "is-revealed",
         smartphone: {
           smooth: true,
@@ -48,33 +47,36 @@ const IndexPage: React.FC = () => {
           <motion.div
             data-scroll-section
             ref={aboutRef}
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 100 }}
             animate={
-              isAboutInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
+              isAboutInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
             }
             transition={{ duration: 0.5 }}
+            className="h-screen"
           >
             <About />
           </motion.div>
           <motion.div
             data-scroll-section
             ref={techRef}
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 100 }}
             animate={
-              isTechInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
+              isTechInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
             }
             transition={{ duration: 0.5 }}
+            className="h-screen"
           >
             <Technologies />
           </motion.div>
           <motion.div
             data-scroll-section
             ref={projectsRef}
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 100 }}
             animate={
-              isProjectsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
+              isProjectsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
             }
             transition={{ duration: 0.5 }}
+            className="h-screen"
           >
             <Projects />
           </motion.div>
