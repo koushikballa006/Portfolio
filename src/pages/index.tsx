@@ -26,8 +26,8 @@ const IndexPage: React.FC = () => {
     <LocomotiveScrollProvider
       options={{
         smooth: true,
-        lerp: 0.075,
-        multiplier: 0.9,
+        lerp: 0.05,
+        multiplier: 0.5,
         class: "is-revealed",
         smartphone: {
           smooth: true,
